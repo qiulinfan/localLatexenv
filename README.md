@@ -6,7 +6,7 @@
 
 - windows: https://tug.org/texlive/ -> install on Windows -> [install-tl-windows.exe](https://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe).
 
-- mac: https://tug.org/mactex/ -> [**MacTeX Download**](https://tug.org/mactex/mactex-download.html).
+- mac: https://tug.org/mactex/ -> [MacTeX Download](https://tug.org/mactex/mactex-download.html).
 
 - linux, wsl: 
 
@@ -93,7 +93,7 @@ make all
 
 注意: `make` 生成 chapters 的独立 PDF 是用的`build_chapters.py` 脚本, 它自动解析 `main.tex` 中所有未注释的 `\input{chapters/xxx}`.
 
-**特点: **
+特点: 
 
 - 编译完成后自动清理 `build/` 目录中的临时文件
 - PDF 文件输出到项目根目录, 便于访问
@@ -115,7 +115,7 @@ make all
 
 ### math
 
-**theorems 类环境 (彩色背景): **
+theorems 类环境 (彩色背景): 
 
 ```latex
 \begin{definition}[optional title]
@@ -139,7 +139,7 @@ make all
 \end{corollary}
 ```
 
-**examples 和 proof 等环境 (彩色字体)**
+examples 和 proof 等环境 (彩色字体)
 
 ```latex
 \begin{example}[optional title]
@@ -163,7 +163,7 @@ make all
 \end{solution}
 ```
 
-**注释类环境 (彩色字体)**
+注释类环境 (彩色字体)
 
 ```latex
 \begin{note}
@@ -185,7 +185,7 @@ make all
 
 ### 代码块
 
-**Python 代码: **
+Python 代码: 
 
 ```latex
 \begin{python}[caption={代码标题}, label=code:label-name]
@@ -195,7 +195,7 @@ def example():
 \end{python}
 ```
 
-**C++ 代码: **
+C++ 代码: 
 ```latex
 \begin{cpp}[caption={代码标题}, label=code:label-name]
 #include <iostream>
@@ -206,7 +206,7 @@ int main() {
 \end{cpp}
 ```
 
-**终端/命令输出: **
+终端/命令输出: 
 ```latex
 \begin{terminal}[caption={输出标题}]
 $ make chapters
@@ -218,14 +218,14 @@ $ make chapters
 \end{cmd}
 ```
 
-**纯文本: **
+纯文本: 
 ```latex
 \begin{txt}[caption={文本标题}]
 纯文本内容, 无语法高亮
 \end{txt}
 ```
 
-**内联代码: **
+内联代码: 
 
 ```latex
 使用 \pythoninline{print("Hello")} 来显示内联 Python 代码。
@@ -237,7 +237,7 @@ $ make chapters
 
 项目提供了两种图片插入方式: 
 
-**带标题和标签的图片**
+带标题和标签的图片
 
 ```latex
 \insertpic[width=0.8\textwidth]{assets/image.png}{图片标题}{fig:label-name}
@@ -259,7 +259,7 @@ $ make chapters
     \end{figure}
 ```
 
-**简单居中图片**
+简单居中图片
 ```latex
 \pic[0.8]{assets/image.png}
 ```
@@ -277,7 +277,7 @@ $ make chapters
     \end{center}
 ```
 
-**引用图片: **
+引用图片: 
 ```latex
 如图 \ref{fig:label-name} 所示...
 ```
