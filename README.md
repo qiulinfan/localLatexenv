@@ -52,6 +52,31 @@ VSCode 最好的 Latex 支持.
 
 
 
+### make 和 python
+
+- windows:
+
+	下载一个包管理器 chocolatey (如果没有的话): 用 admin 身份打开 powershell, 运行
+
+	```powershell
+	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+	```
+
+	然后关掉窗口之后运行:
+
+	```
+	```
+
+	
+
+- ran 
+
+- 
+
+
+
+
+
 ## 项目结构
 
 ```

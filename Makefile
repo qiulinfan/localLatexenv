@@ -1,4 +1,9 @@
-.PHONY: all main chapters clean
+.PHONY: all main chapters docs deploy depoly clean
+
+PYTHON := python3
+ifeq ($(OS),Windows_NT)
+PYTHON := python
+endif
 
 # 默认目标：生成主 PDF 和所有章节 PDF
 all: chapters
@@ -13,12 +18,18 @@ main:
 
 # 为每个章节生成独立的 PDF
 chapters:
-	@python3 build_chapters.py
+	@$(PYTHON) build_chapters.py
 	@$(MAKE) -s clean
+
+docs:
+	@$(PYTHON) generate_docs_pages.py
+	@$(PYTHON) generate_mkdocs_config.py
 
 deploy:
 	@mkdocs build
 	@mkdocs gh-deploy --force --remote-branch gh-deploy
+
+depoly: deploy
 
 
 # 清理生成的文件
