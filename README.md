@@ -96,7 +96,7 @@ make all
 特点: 
 
 - 编译完成后自动清理 `build/` 目录中的临时文件
-- PDF 文件输出到项目根目录, 便于访问
+- PDF 文件输出到 `docs` (这是为了: 如果想要用 mkdocs 等工具 build github page 来放这些 pdf, 这个位置比较方便)
 - `build/` 目录只保留编译过程中的临时文件 (以及一个平时 autobuild 时的 main.pdf, Latex Workshop Extension 中 view Latex PDF 看的是它)
 
 
