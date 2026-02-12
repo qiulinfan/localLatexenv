@@ -34,10 +34,10 @@ depoly: deploy
 
 # 清理生成的文件
 clean:
-	@rm -f build/*.aux build/*.log build/*.out build/*.toc build/*.fdb_latexmk build/*.fls build/*.synctex.gz
-	@rm -f build/*.bcf build/*.run.xml build/*.bbl build/*.blg
-	@rm -f build/*_main.tex
+	-@rm -f build/*.aux build/*.log build/*.out build/*.toc build/*.fdb_latexmk build/*.fls build/*.synctex.gz
+	-@rm -f build/*.bcf build/*.run.xml build/*.bbl build/*.blg
+	-@rm -f build/*_main.tex
 
 # 完全清理（包括 PDF）
 clean-all: clean
-	@rm -f build/*.pdf *.pdf
+	-@rm -f build/*.pdf *.pdf

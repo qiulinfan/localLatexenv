@@ -52,7 +52,9 @@ VSCode 最好的 Latex 支持.
 
 
 
-### make 和 python
+### 需要 make 和 python
+
+python 就不说了. 这里说一下安装 `make` (mac 和 linux 一行指令即可. windows 稍微复杂一点)
 
 - windows:
 
@@ -62,18 +64,46 @@ VSCode 最好的 Latex 支持.
 	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 	```
 
-	然后关掉窗口之后运行:
+	然后关掉窗口之后, 再次用 admin 身份打开 powershell, 运行:
 
+	```powershell
+	choco install make
 	```
+
+	验证一下已安装:
+
+	```powershell
+	make --version
+	# GNU Make 4.4.1
+	#Built for Windows32
+	#Copyright (C) 1988-2023 Free Software Foundation, Inc.
+	#License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
+	#This is free software: you are free to change and redistribute it.
+	#There is NO WARRANTY, to the extent permitted by law.
 	```
 
-	
+- mac:
 
-- ran 
+	(如果没安装 brew, 安装一下)
 
-- 
+	```bash
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	```
 
+	然后
 
+	```bash
+	brew install make
+	```
+
+- linux:
+
+	```bash
+	sudo apt update
+	sudo apt install make
+	```
+
+	(Fedora / CentOS / RHEL: `apt` -> `dnf`)
 
 
 
@@ -324,6 +354,8 @@ $ make chapters
 
 
 
+
+# 注2: mkdocs 的 build 和 github pages 的 depoly
 
 
 
