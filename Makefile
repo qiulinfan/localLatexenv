@@ -18,12 +18,12 @@ main:
 
 # 为每个章节生成独立的 PDF
 chapters:
-	@$(PYTHON) build_chapters.py
+	@$(PYTHON) scripts/build_chapters.py
 	@$(MAKE) -s clean
 
 docs:
-	@$(PYTHON) generate_docs_pages.py
-	@$(PYTHON) generate_mkdocs_config.py
+	@$(PYTHON) scripts/generate_docs_pages.py
+	@$(PYTHON) scripts/generate_mkdocs_config.py
 
 deploy:
 	@mkdocs build

@@ -23,6 +23,3 @@ extra_css:
 
 nav:
   - Home: index.md
-  - Chapters:
-    - example-chapter-2: example-chapter-2.md
-    - example-chapter: example-chapter.md

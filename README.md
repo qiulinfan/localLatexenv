@@ -118,7 +118,10 @@ project/
 │   ├── ch02-*.tex
 │   └── ...
 ├── build/                # 编译临时文件目录 (平时 autocompile 的时候我把 main.pdf 放在了这里, 其他文件都是 build 生产的临时文件)
-├── build_chapters.py     # chapter PDF 生成脚本
+├── scripts/              # 自动化脚本
+│   ├── build_chapters.py
+│   ├── generate_docs_pages.py
+│   └── generate_mkdocs_config.py
 ├── Makefile     
 └── *.pdf                 # 生成的各章节 PDF 文件 (在根目录) 
 ```
@@ -146,7 +149,7 @@ make main
 make all
 ```
 
-注意: `make` 生成 chapters 的独立 PDF 是用的`build_chapters.py` 脚本, 它自动解析 `main.tex` 中所有未注释的 `\input{chapters/xxx}`.
+注意: `make` 生成 chapters 的独立 PDF 是用的 `scripts/build_chapters.py` 脚本, 它自动解析 `main.tex` 中所有未注释的 `\input{chapters/xxx}`.
 
 特点: 
 
@@ -343,21 +346,48 @@ $ make chapters
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 # 注2: mkdocs 的 build 和 github pages 的 depoly
 
+这里包括了一个构建静态网页, 并部署到 GitHub pages 的模板
 
+流程如下:
+
+```bash
+# 先生成 docs/*.pdf (来自 chapters/*.tex)
+make # or make chapters
+# 再根据 docs/*.pdf 自动生成 docs/*.md + mkdocs.yml
+make docs
+# 部署到 gh-deploy 分支
+make deploy
+```
+
+我使用的是 [mkdocs](https://www.mkdocs.org/) 作为静态网页构建器. 这里我们的自动化脚本做的事情是:
+
+- `make docs` 根据 `make` 在 `docs` 中生成的 `*.pdf` 文件, 生成用来构建 mkdocs 配置的 `index.md` 和各个 chapters 的 markdown 文件 (只是用来放 pdf); 以及根据当前的 repository 自动生成根目录的 `mkdocs.yml` 文件, 然后自动 build
+- `make depoly` 即 `mkdocs depoly`, 这里是为了 command 的 consistency.
+
+跑完这些命令后请在 `make depoly` 后更改 GitHub Pages 配置:
+
+- `Settings -> Pages -> Build and deployment`
+- 选择 `Deploy from a branch`
+- 分支选择 `gh-deploy`
+- Folder 选择 `/(root)`
+
+备注:
+
+- `site/` 是 mkdocs 构建产物, 所以这里加入了 `.gitignore`, 不用管它
+- 若 Windows 下终端暂时找不到 `make`, 重开终端即可
+
+
+## License
+
+This project is licensed under the MIT License.
+
+你可以自由地使用、复制、修改、合并、发布、分发和商用本项目代码, 但需要保留原始的 copyright 和 license 声明.
+
+详细条款见 [LICENSE](LICENSE).
+
+另外, 项目中使用的第三方模板/依赖 (例如 ElegantBook) 仍然遵循其各自许可证, 不自动受本仓库 MIT 许可证覆盖.
 
 
 

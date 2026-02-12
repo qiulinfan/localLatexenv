@@ -105,7 +105,7 @@ def build_mkdocs_yaml(
 
 
 def main() -> None:
-    project_root = Path(__file__).resolve().parent
+    project_root = Path(__file__).resolve().parent.parent
     docs_dir = project_root / "docs"
     docs_dir.mkdir(exist_ok=True)
 

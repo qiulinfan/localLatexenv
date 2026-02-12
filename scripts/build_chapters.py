@@ -168,7 +168,7 @@ def compile_tex(tex_file, output_dir, project_root):
 
 
 def main():
-    project_root = Path(__file__).parent
+    project_root = Path(__file__).resolve().parent.parent
     main_tex = project_root / 'main.tex'
     build_dir = project_root / 'build'
     docs_dir = project_root / 'docs'
@@ -212,14 +212,6 @@ def main():
 
     generated_pdfs = []
     for chapter_path, _ in active_chapters:
-        # Normalize path for lookup (ensure it has .tex)
-        if not chapter_path.endswith('.tex'):
-            normalized_path = chapter_path
-            chapter_path_with_tex = chapter_path + '.tex'
-        else:
-            normalized_path = chapter_path[:-4]  # Remove .tex for stem
-            chapter_path_with_tex = chapter_path
-        
         chapter_name = Path(chapter_path).stem
         counter = chapter_numbers.get(chapter_path, 0)
 
