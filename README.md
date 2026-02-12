@@ -350,7 +350,7 @@ $ make chapters
 
 这里包括了一个构建静态网页, 并部署到 GitHub pages 的模板
 
-流程如下:
+使用方法如下:
 
 ```bash
 # 先生成 docs/*.pdf (来自 chapters/*.tex)
@@ -375,8 +375,13 @@ make deploy
 
 备注:
 
-- `site/` 是 mkdocs 构建产物, 所以这里加入了 `.gitignore`, 不用管它
+- `site/` 是 mkdocs 构建产物, 所以这里加入了 `.gitignore`, 不用管它. 在运行 `make depoly` 的时候它的内容会被 push 到 `gh-deploy` branch.
+
+	(`mkdocs gh-deploy` 会构建一个临时目录并拷贝其内容, 不用担心它被 ignore 所以 push 不了)
+
 - 若 Windows 下终端暂时找不到 `make`, 重开终端即可
+
+- 在 `make docs` (也就是自动 `mkdocs build`) 之后, 可以运行 `mkdocs serve` 先在本地查看构建样式. 毕竟 deploy 之后还要等待 github 服务器部署.
 
 
 
