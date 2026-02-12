@@ -379,15 +379,6 @@ make deploy
 - 若 Windows 下终端暂时找不到 `make`, 重开终端即可
 
 
-## License
-
-This project is licensed under the MIT License.
-
-你可以自由地使用、复制、修改、合并、发布、分发和商用本项目代码, 但需要保留原始的 copyright 和 license 声明.
-
-详细条款见 [LICENSE](LICENSE).
-
-另外, 项目中使用的第三方模板/依赖 (例如 ElegantBook) 仍然遵循其各自许可证, 不自动受本仓库 MIT 许可证覆盖.
 
 
 
