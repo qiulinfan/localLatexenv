@@ -16,6 +16,11 @@ chapters:
 	@python3 build_chapters.py
 	@$(MAKE) -s clean
 
+deploy:
+	@mkdocs build
+	@mkdocs gh-deploy --force --remote-branch gh-deploy
+
+
 # 清理生成的文件
 clean:
 	@rm -f build/*.aux build/*.log build/*.out build/*.toc build/*.fdb_latexmk build/*.fls build/*.synctex.gz
