@@ -1136,8 +1136,8 @@
 \usepackage[titles]{tocloft}
 \ifdefstring{\ELEGANT@lang}{cn}{
   \renewcommand{\cftchappresnum}{\beforechap\space}
-  \renewcommand{\cftchapaftersnum}{\space\afterchap}
-  \setlength{\cftchapnumwidth}{\widthof{\textbf{附录~999}}}
+  \renewcommand{\cftchapaftersnum}{\space\afterchap\space}
+  \setlength{\cftchapnumwidth}{\widthof{\textbf{\beforechap\space 999\space\afterchap\space}}}
   \g@addto@macro\appendix{%
     \addtocontents{toc}{%
       \protect\renewcommand{\protect\cftchappresnum}{\appendixname\space}%
