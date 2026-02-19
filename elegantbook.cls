@@ -158,7 +158,8 @@
   \RequirePackage[lite]{mtpro2}
 }{\relax}
 
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{2}
+\hypersetup{bookmarksdepth=subsection}
 \renewcommand{\baselinestretch}{1.2}
 
 \PassOptionsToPackage{no-math}{fontspec}
