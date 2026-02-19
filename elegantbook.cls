@@ -1383,3 +1383,22 @@
 }
 
 \newcommand{\ds}{\displaystyle}
+
+
+
+\usepackage{amsmath}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\setCJKmainfont{FandolSong-Regular}[BoldFont=FandolHei-Regular,ItalicFont=FandolKai-Regular]
+\setCJKsansfont{FandolHei-Regular}
+\setCJKmonofont{FandolFang-Regular}
+\setCJKfamilyfont{zhsong}{FandolSong-Regular}
+\setCJKfamilyfont{zhhei}{FandolHei-Regular}
+\setCJKfamilyfont{zhfs}{FandolFang-Regular}
+\setCJKfamilyfont{zhkai}{FandolKai-Regular}
+\newcommand*{\songti}{\CJKfamily{zhsong}}
+\newcommand*{\heiti}{\CJKfamily{zhhei}}
+\newcommand*{\fangsong}{\CJKfamily{zhfs}}
+\newcommand*{\kaishu}{\CJKfamily{zhkai}}
