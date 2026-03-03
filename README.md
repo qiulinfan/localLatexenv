@@ -42,13 +42,17 @@ tlmgr info scheme-full
 
 
 
-### 安装 VSCode Latex workshop
+### 安装 VSCode Latex workshop & Ultra Math Preview
 
-VSCode 最好的 Latex 支持. 
+VSCode Latex workshop 是 VSCode 最好的 Latex 支持. 
 
 不用配置文件路径, 它能找到我们的  texlive 安装的引擎和 packages
 
 我的配置文件 settings.json: 使用 lualatex, 生成的临时文件放入 build/, 自动 compile
+
+
+
+我推荐的另一个 latex 辅助 extension 是 Ultra Math Preview. 完美弥补了 Latex workshop 里没有数学环境实时渲染的问题. 
 
 
 
