@@ -1405,3 +1405,5 @@
 \newcommand*{\heiti}{\CJKfamily{zhhei}}
 \newcommand*{\fangsong}{\CJKfamily{zhfs}}
 \newcommand*{\kaishu}{\CJKfamily{zhkai}}
+
+\allowdisplaybreaks
