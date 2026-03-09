@@ -744,7 +744,7 @@
 \newenvironment{proof}{
   \par\noindent\textbf{\color{second}\proofname\;}
   \color{black!90}\cfs}{
-  % \hfill$\Box$\quad
+  \nobreak\hfill\ensuremath{\square}
   \par}
 
 \newenvironment{solution}{\par\noindent\textbf{\color{main}\solutionname} \cfs}{\par}
